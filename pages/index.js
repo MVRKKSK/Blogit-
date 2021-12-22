@@ -1,18 +1,11 @@
 import Head from 'next/head'
 import { PostCard , PostWidjet , Categories } from '../components';
 import "bootstrap/dist/css/bootstrap.min.css"
-/* import "bootstrap/dist/js/bootstrap.bundle.min.js"
-
- */
-
-
-const posts = [
-  { title: "React testing", excerpt: "React Learning" },
-  { title: "React Second", excerpt: "React Learning Second" }
-];
+/* import "bootstrap/dist/js/bootstrap.bundle.min.js" */
+import { GetPosts } from '../services';
 
 
-export default function Home() {
+export default function Home({posts}) {
   return (
     <div className='container'>
       <Head>
@@ -24,10 +17,10 @@ export default function Home() {
         <div className='col-md-3 d-flex flex-column align-items-center justify-content-center'>
           <Categories />
         </div>
-        <div className='col-md-6 d-flex flex-column align-items-center justify-content-center'>
-          {posts.map((post, index) => (
+        <div className='col-md-6 d-flex flex-column '>
+          {posts.map((post) => (
             <div>
-              <PostCard post = {post} key = {post.title} />
+              <PostCard post = {post.node} key = {post.title} />
             </div>
           ))}
         </div>
@@ -37,4 +30,13 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+
+export async function getStaticProps(){
+  const posts = (await GetPosts()) || [];
+
+  return {
+   props:{ posts }
+  }
 }

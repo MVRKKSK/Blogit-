@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 html,
 body {
   margin: 0;
@@ -35,6 +37,52 @@ a {
   padding-right: 20px;
   padding-left: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-/* #################################       end of css in navbar section ########################################## */
+/* #################################       end of css in navbar section    ########################################## */
+
+
+/* #################################### start point css of main postcard  ############################################  */
+
+.PostCard-main{
+  background-color: white;
+  box-shadow: 20px;
+  border-radius: 10px;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+.PostCard-content{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80%;
+  margin-bottom: 0px;
+  box-shadow: 20px;
+  border-radius: 10px;
+}
+.Postcard-image-main{
+
+  position: absolute;
+  height: 90%;
+  width: full;
+  object-fit: cover;
+  object-position: top;
+  
+
+}
+.Post-card-content{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+
+}
+/* .Post-card-content:hover{
+  color: pink;
+  
+}
+ */
+/* #################################### end point css of main postcard  ############################################  */
