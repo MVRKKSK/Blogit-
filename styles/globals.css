@@ -6,8 +6,8 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-  
+
+
 
 }
 
@@ -45,44 +45,157 @@ a {
 
 /* #################################### start point css of main postcard  ############################################  */
 
-.PostCard-main{
-  background-color: white;
+.PostCard-main {
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
   box-shadow: 20px;
   border-radius: 10px;
   padding: 0px;
   padding-bottom: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
-.PostCard-content{
+
+.PostCard-content {
   position: relative;
   overflow: hidden;
   padding-bottom: 80%;
-  margin-bottom: 0px;
+  margin-bottom: -90px;
   box-shadow: 20px;
   border-radius: 10px;
 }
-.Postcard-image-main{
+
+.Postcard-image-main {
 
   position: absolute;
-  height: 90%;
+  height: 75%;
   width: full;
   object-fit: cover;
   object-position: top;
-  
+
+
 
 }
-.Post-card-content{
+
+.Post-card-content {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 32px;
-  color: black;
+  color: white;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
 
+.Icon-POstCard {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
 }
-/* .Post-card-content:hover{
-  color: pink;
+
+.Author-PostCard {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(224, 214, 201);
+  margin-left: 5px;
+}
+
+.Icon-Author {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.Icon-And-Author-Date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moment-date-icon {
+  margin-right: 10px;
+}
+
+.date-POstcard-moment {
+  margin-top: 3px;
+  margin-left: 3px;
+  color: white;
+}
+
+.Heading-text-POstcard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-left: 48px;
+  padding-right: 53px;
+  transition: all 0.2s linear;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.in-line-text-heading-post-card{
+  padding-bottom: 30px;
+}
+
+.Read-more-text{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
+  background-color: #a4508b;
+background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
   
+
+color: white;
+font-weight: bolder;
+
+  border-radius: 5px;
+  cursor: pointer;
 }
- */
+.Read-More-Button{
+  text-align: center;
+}
+
+.Read-more-text:hover {
+  background-color: #5f0a87;
+background-image: linear-gradient(326deg, #5f0a87 0%, #a4508b 74%);
+}
+
+@media (max-width:1200px){
+  .PostCard-content{
+    margin-bottom: -50px;
+  }
+}
+
+@media(max-width:992px) {
+  .Icon-And-Author-Date {
+    display: flex;
+    flex-direction: column;
+  }
+  .PostCard-content{
+    margin-bottom: -70px;
+  }
+
+  .moment-date-icon {
+    margin-left: 1px;
+
+  }
+}
+
+@media (max-width:768px){
+  .PostCard-content{
+    margin-bottom: -50px;
+  }
+}
+
+
+
+
 /* #################################### end point css of main postcard  ############################################  */

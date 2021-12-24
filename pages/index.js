@@ -14,17 +14,17 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='row '>
-        <div className='col-md-3 d-flex flex-column align-items-center justify-content-center'>
+        <div className='col-lg-3 d-flex flex-column align-items-center justify-content-center'>
           <Categories />
         </div>
-        <div className='col-md-6 d-flex flex-column '>
+        <div className='col-lg-6 d-flex flex-column '>
           {posts.map((post) => (
             <div>
               <PostCard post = {post.node} key = {post.title} />
             </div>
           ))}
         </div>
-        <div className='col-md-3 d-flex flex-column align-items-center justify-content-center'>
+        <div className='col-lg-3 d-flex flex-column align-items-center justify-content-center'>
             <PostWidjet />
         </div>
       </div>
