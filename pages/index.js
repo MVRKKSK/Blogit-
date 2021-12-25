@@ -14,7 +14,7 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='row '>
-        <div className='col-lg-3 d-flex flex-column align-items-center justify-content-center'>
+        <div className='col-lg-3 d-flex flex-column align-items-center'>
           <Categories />
         </div>
         <div className='col-lg-6 d-flex flex-column '>
@@ -24,7 +24,7 @@ export default function Home({posts}) {
             </div>
           ))}
         </div>
-        <div className='col-lg-3 d-flex flex-column align-items-center justify-content-center'>
+        <div className='col-lg-3 d-flex flex-column align-items-center'>
             <PostWidjet />
         </div>
       </div>

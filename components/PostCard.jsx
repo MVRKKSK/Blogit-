@@ -3,7 +3,6 @@ import Link from "next/link"
 import { FcCalendar } from "react-icons/fc";
 
 const PostCard = ({ post }) => {
-    console.log(post)
     return (
         <div className="PostCard-main">
             <div className="PostCard-content">
