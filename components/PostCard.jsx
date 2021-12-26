@@ -4,7 +4,7 @@ import { FcCalendar } from "react-icons/fc";
 
 const PostCard = ({ post }) => {
     return (
-        <div className="PostCard-main">
+        <div className="PostCard-main shadow-lg">
             <div className="PostCard-content">
                 <img src={post.featuredImage.url}
                     alt={post.title}
@@ -36,7 +36,7 @@ const PostCard = ({ post }) => {
                     {post.exercpt}
                 </div>
                 <div className="Read-More-Button">
-                    <Link href={`/post${post.slug}`}>
+                    <Link href={`/post/${post.slug}`}>
                         <span className="Read-more-text">Read More</span>
                     </Link>
                 </div>

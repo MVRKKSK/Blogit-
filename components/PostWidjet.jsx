@@ -1,43 +1,49 @@
-import moment from "moment"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import moment from 'moment';
+import Link from 'next/link';
 
-import { getRecentPosts } from "../services"
+import { getSimilarPosts, getRecentPosts } from '../services';
 
-const PostWidjet = ({ categories, slug }) => {
+const PostWidget = ({ categories, slug }) => {
+  const [relatedPosts, setRelatedPosts] = useState([]);
 
-    const [getRelatedposts, setRelatedgetposts] = useState([])
-    useEffect(() => {
-        if (slug) {
-            getSimilarposts(categories, slug)
-                .then((result) => (
-                    setRelatedgetposts(result)
-                ))
-        }
-        else {
-            getRecentPosts()
-                .then((result) => (
-                    setRelatedgetposts(result)
-                ))
-        }
-    }, [slug])
-    console.log(10)
-    return (
-        <div className="PostWidget-main">
-            <div className="PostWidget-content-main">
-                <p className="heading-postWidget-main-content">
-                    {slug ? " Related Posts" : "Recent Posts"}
-                </p>
-                {getRelatedposts.map((post) => (
-                    <div key={post.title} className="image-content-date-postWidget d-flex flex-column justify-content-center align-items-center">
-                        <img src={post.featuredImage.url} alt={post.title} className="postWidget-image" />
-                        <p className="date-in-PostWidget">{moment(post.CreateAt).format('MMM DD , YYYY')}</p>
-                    </div>
-                ))}
+  useEffect(() => {
+    if (slug) {
+      getSimilarPosts(categories, slug).then((result) => {
+        setRelatedPosts(result);
+      });
+    } else {
+      getRecentPosts().then((result) => {
+        setRelatedPosts(result);
+      });
+    }
+  }, [slug]);
 
-
-            </div>
+  return (
+    <div className="Post-widjet-main">
+      <h3 className="Post-widjet-heading">{slug ? 'Related Posts' : 'Recent Posts'}</h3>
+      {relatedPosts.map((post, index) => (
+        <div key={index} className="Post-widjet-content">
+          <div className="image-div-post-widjet">
+            <img
+              
+              alt={post.title}
+              height="60px"
+              width="60px"
+              unoptimized
+              className="image-post-widjet"
+              src={post.featuredImage.url}
+            />
+          </div>
+          <div className="Date-slug-post-widjet">
+            <p className="Date-post-widjet">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
+            <Link href={`/post/${post.slug}`} className="Slug-post-widjet" key={index}>{post.title}</Link>
+          </div>
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default PostWidjet
+export default PostWidget;

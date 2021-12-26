@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { PostCard , PostWidjet , Categories } from '../components';
 import "bootstrap/dist/css/bootstrap.min.css"
 /* import "bootstrap/dist/js/bootstrap.bundle.min.js" */
-import { GetPosts } from '../services';
+import { getPosts } from '../services';
 
 
 export default function Home({posts}) {
@@ -14,9 +14,9 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='row '>
-        <div className='col-lg-3 d-flex flex-column align-items-center'>
+        {/* <div className='col-lg-3 d-flex flex-column align-items-center'>
           <Categories />
-        </div>
+        </div> */}
         <div className='col-lg-6 d-flex flex-column '>
           {posts.map((post) => (
             <div>
@@ -33,10 +33,9 @@ export default function Home({posts}) {
 }
 
 
-export async function getStaticProps(){
-  const posts = (await GetPosts()) || [];
-
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
   return {
-   props:{ posts }
-  }
+    props: { posts },
+  };
 }
