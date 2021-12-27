@@ -21,7 +21,7 @@ const PostWidget = ({ categories, slug }) => {
   }, [slug]);
 
   return (
-    <div className="Post-widjet-main">
+    <div className="Post-widjet-main shadow-lg">
       <h3 className="Post-widjet-heading">{slug ? 'Related Posts' : 'Recent Posts'}</h3>
       {relatedPosts.map((post, index) => (
         <div key={index} className="Post-widjet-content">
@@ -29,8 +29,6 @@ const PostWidget = ({ categories, slug }) => {
             <img
               
               alt={post.title}
-              height="60px"
-              width="60px"
               unoptimized
               className="image-post-widjet"
               src={post.featuredImage.url}
@@ -38,7 +36,7 @@ const PostWidget = ({ categories, slug }) => {
           </div>
           <div className="Date-slug-post-widjet">
             <p className="Date-post-widjet">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
-            <Link href={`/post/${post.slug}`} className="Slug-post-widjet" key={index}>{post.title}</Link>
+            <Link href={`/post/${post.slug}`} key={index}><p className="Slug-post-widjet" >{post.title}</p></Link>
           </div>
         </div>
       ))}
