@@ -12,7 +12,6 @@ const Categories = () => {
             )
         }
     }, [])
-    console.log(categories)
     return (
         <div className="Categories-main shadow-lg">
             <p className="Categories-heading">Categories</p>
