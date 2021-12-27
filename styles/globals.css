@@ -286,3 +286,47 @@ background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
 }
 
 /* #################################### end point css of main Post Widget  ############################################  */
+
+
+/* #################################### start point css of main categories  ############################################  */
+
+.Categories-main {
+  position: sticky;
+  top: 114px;
+  padding-bottom: 50%;
+  background-color: #ee8c68;
+background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+  
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.Categories-heading {
+  padding-top: 20px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+ color: #591313;
+ margin-bottom: 20px;
+ padding-bottom: 10px;
+ border-bottom: 2px white solid;
+}
+
+.Categories-content{
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.Category-slug-main{
+  margin-right: 60px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+
+
+/* #################################### end point css of main categories  ############################################  */
