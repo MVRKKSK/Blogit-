@@ -15,14 +15,14 @@ const PostCard = ({ post }) => {
                     {post.title}
                 </Link>
             </h1>
-            <div className="Icon-And-Author-Date d-flex justify-content-space-between ">
-                <div className="Icon-Author d-flex ">
+            <div className="Icon-And-Author-Date ">
+                <div className="Icon-Author d-flex justify-content-center align-items-center ">
                     <img src={post.author.photo.url}
                         alt=""
                         className="Icon-POstCard" />
                     <p className="Author-PostCard">{post.author.name}</p>
                 </div>
-                <div className="moment-date-icon d-flex ">
+                <div className="moment-date-icon d-flex justify-content-center align-items-center">
                     <div className="icon-POstcard-moment">
                         <FcCalendar size="2em" />
                     </div>
