@@ -1,29 +1,21 @@
 import React from 'react'
-import { Categories } from '../../components'
 import PostDetail from '../../components/PostDetail'
 import PostWidget from '../../components/PostWidjet'
 
-import {getPosts , getPostDetails} from "../../services"
+import { getPosts, getPostDetails } from "../../services"
 
-const PostDetails = () => {
+const PostDetails = ({post}) => {
     return (
         <div className='container' >
             <div className='row'>
-                
+
                 <div className='col-lg-3'>
-                <PostWidget  />
+                <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
                 </div>
-                <div className='col-lg-6'>
-                <PostDetail  />
-                </div>
-            </div>
-            <div className='row'>
-            <div className='col-lg-3'>
-                <Categories  />
+                <div className='col-lg-9'>
+                    <PostDetail post = {post}/>
                 </div>
             </div>
-            
-            
         </div>
     )
 }
@@ -31,13 +23,21 @@ const PostDetails = () => {
 export default PostDetails;
 
 
-export async function getStaticProps({params}) {
-    const posts = (await getPosts()) || [];
+export async function getStaticProps({ params }) {
+    const data = await getPostDetails(params.slug);
     return {
-      props: { posts },
+        props: {
+            post: data,
+        },
     };
-  }
-
+}
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return {
+        paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+        fallback: true,
+    };
+}
 
 
 

@@ -85,8 +85,7 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
-  object-fit: cover;
-  object-position: top;
+
 
 
 
@@ -230,7 +229,7 @@ a {
   padding-bottom: 50%;
   background-color: #fad0c4;
   background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
-  
+
   border-radius: 10px;
   padding-right: 20px;
   padding-left: 20px;
@@ -244,24 +243,25 @@ a {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 500;
- color: #591313;
- margin-bottom: 20px;
- padding-bottom: 10px;
- border-bottom: 2px white solid;
+  color: #591313;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px white solid;
 }
 
-.Post-widjet-content{
+.Post-widjet-content {
   position: relative;
   padding-bottom: 30px;
 }
-.image-post-widjet{
+
+.image-post-widjet {
   position: absolute;
   width: 40px;
   height: 40px;
   border-radius: 50px;
 }
 
-.Date-post-widjet{
+.Date-post-widjet {
   position: absolute;
   font-size: 12px;
   margin-left: 60px;
@@ -270,13 +270,14 @@ a {
   padding-right: 3px;
   padding-left: 3px;
   background-color: #3bb78f;
-background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
-  
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+
   color: white;
   border-radius: 10px;
 }
-.Slug-post-widjet{
-  
+
+.Slug-post-widjet {
+
   font-size: 16px;
   padding-top: 15px;
   line-height: 16px;
@@ -295,8 +296,8 @@ background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   top: 114px;
   padding-bottom: 50%;
   background-color: #ee8c68;
-background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
-  
+  background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+
   border-radius: 10px;
   padding-right: 20px;
   padding-left: 20px;
@@ -310,18 +311,18 @@ background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 500;
- color: #591313;
- margin-bottom: 20px;
- padding-bottom: 10px;
- border-bottom: 2px white solid;
+  color: #591313;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px white solid;
 }
 
-.Categories-content{
+.Categories-content {
   position: relative;
   padding-bottom: 30px;
 }
 
-.Category-slug-main{
+.Category-slug-main {
   margin-right: 60px;
   margin-left: 60px;
   cursor: pointer;
@@ -330,3 +331,51 @@ background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
 
 
 /* #################################### end point css of main categories  ############################################  */
+/* #################################### start point css of main post details  ############################################  */
+
+
+.details-main {
+  padding-bottom: 100%;
+
+  margin-bottom: 50px;
+  background-color: #f9c5d1;
+background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+  border-radius: 10px;
+}
+
+.post-detail-author{
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.details-content {
+  position: relative;
+
+}
+.image-post-details{
+  border-radius: 10px;
+
+  width: 100%;
+  height: 60vh;
+
+  
+}
+
+.post-detail-image-author{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.post-details-title-main{
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  color: red;
+}
+
+
+/* #################################### end point css of main post details  ############################################  */

@@ -29,7 +29,6 @@ const PostWidget = ({ categories, slug }) => {
             <img
               
               alt={post.title}
-              unoptimized
               className="image-post-widjet"
               src={post.featuredImage.url}
             />
