@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentForm from '../../components/CommentForm'
 import PostDetail from '../../components/PostDetail'
 import PostWidget from '../../components/PostWidjet'
 
@@ -16,6 +17,7 @@ const PostDetails = ({post}) => {
                     <PostDetail post = {post}/>
                 </div>
             </div>
+            <CommentForm />
         </div>
     )
 }
