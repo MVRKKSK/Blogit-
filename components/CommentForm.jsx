@@ -7,7 +7,33 @@ const CommentForm = ({ slug }) => {
     const commentEl = useRef();
     const nameEl = useRef();
     const emailEl = useRef();
-    const storedataEl = useRef();;
+    const storedataEl = useRef();
+
+    const handleSubmission = () => {
+        setError(false);
+
+        const {value: comment} = commentEl.current
+        const {value: name} = nameEl.current
+        const {value: email} = emailEl.current
+        const {checked: storedata} = storedataEl.current
+
+        if(!comment || !name || !email ) {
+            setError(true);
+            return;
+        }
+
+        const commentObj = {name , email , slug , comment};
+
+        if(storedata){
+            localStorage.setItem("name" ,name)
+            localStorage.setItem("email" ,email)
+        }
+        else{
+            localStorage.removeItem("name" , name)
+            localStorage.removeItem("email" , email)
+        }
+    }
+
     return (
         <div>
             <div className="commentform-main">
@@ -19,9 +45,17 @@ const CommentForm = ({ slug }) => {
                 </div>
                 <div className="container ">
                     <div className="row name-email-commentform">
-                        <div className="col-lg-6"><textarea name='name' ref={nameEl} placeholder='Name' className='name-area-commentform' ></textarea></div>
-                        <div className="col-lg-6"><textarea name='email' ref={emailEl} placeholder='Email' className='email-area-commentform' ></textarea></div>
+                        <div className="col-lg-6"><input name='name' ref={nameEl} placeholder='Name' className='name-area-commentform' ></input></div>
+                        <div className="col-lg-6"><input name='email' ref={emailEl} placeholder='Email' className='email-area-commentform' ></input></div>
                     </div>
+                    <div className="label-input-comment-form">
+                        <input className='checkbox-commentform' ref={storedataEl} type="checkbox" name='storedata' id = "storedata" />
+                        <label className='label-comment-form' htmlFor="storedata">Save my email and name for the next time I comment</label>
+                    </div>
+                    <div className="button-comment-form">
+                        <button type="button" onClick={handleSubmission} className='Button-main-comment-form'>Add Comment</button>
+                    </div>
+                   {showSuccessMessage && <div className='review-submission-commentform'>Your comment is submitted for review</div> } 
                 </div>
 
 
