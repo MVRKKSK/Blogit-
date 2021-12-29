@@ -5,19 +5,24 @@ import PostWidget from '../../components/PostWidjet'
 
 import { getPosts, getPostDetails } from "../../services"
 
-const PostDetails = ({post}) => {
+const PostDetails = ({ post }) => {
     return (
         <div className='container' >
             <div className='row'>
-
-                <div className='col-lg-3'>
-                <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
-                </div>
                 <div className='col-lg-9'>
-                    <PostDetail post = {post}/>
+                    <PostDetail post={post} />
+                </div>
+                <div className='col-lg-3'>
+                    <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
                 </div>
             </div>
-            <CommentForm />
+            <div className='row'>
+                <div className='col-lg-9'>
+                    <CommentForm slug={post.slug} />
+                </div>
+
+            </div>
+
         </div>
     )
 }

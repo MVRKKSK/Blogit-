@@ -41,7 +41,6 @@ const PostDetail = ({ post }) => {
                 return modifiedText;
         }
     };
-    console.log(post)
     return (
         <div className="details-main shadow-lg">
             <div className="details-content">
@@ -55,7 +54,7 @@ const PostDetail = ({ post }) => {
                 <div className='post-detail-author'>
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="">
-                            <img src={post.author.photo.url} alt={post.title} className='post-detail-image-author' />
+                            <img src={post.author.photo.url} alt={post.title} className='post-detail-image-author shadow-lg' />
                         </div>
                         <div className="post-detail-author-name">
                             {post.author.name}
