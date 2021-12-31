@@ -1,4 +1,5 @@
 import React from 'react'
+import { Comments } from '../../components'
 import CommentForm from '../../components/CommentForm'
 import PostDetail from '../../components/PostDetail'
 import PostWidget from '../../components/PostWidjet'
@@ -22,6 +23,14 @@ const PostDetails = ({ post }) => {
                 </div>
 
             </div>
+            <div className='row'>
+                <div className='col-lg-9'>
+                    <Comments slug={post.slug} />
+                </div>
+
+            </div>
+
+            
 
         </div>
     )
