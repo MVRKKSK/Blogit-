@@ -13,13 +13,11 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="d-none d-lg-flex nav-side-comp ">
-                    {categories.map((category) => (
-                        <Link key={category.slug} href={`/category/${category.slug}`} >
                             <div className="nav-side-comp">
-                                {category.name}
+                                {/* <p className="side-component">LinkedIn</p>
+                                <p className="side-component">Github</p>
+                                <p className="side-component"></p> */}
                             </div>
-                        </Link>
-                    ))}
                 </div>
             </div>
 
