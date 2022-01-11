@@ -27,7 +27,7 @@ const PostWidget = ({ categories, slug }) => {
         <div key={index} className="Post-widjet-content">
           <div className="image-div-post-widjet">
             <img
-              
+
               alt={post.title}
               className="image-post-widjet"
               src={post.featuredImage.url}
