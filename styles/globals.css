@@ -234,14 +234,11 @@ a {
 } */
 
 
-
-
 /* #################################### end point css of main postcard  ############################################  */
-
-
 /* #################################### start point css of main postWidjet  ############################################  */
 
-.Post-widjet-main {
+
+.Post-widjet-main{
   position: sticky;
   top: 114px;
   padding-bottom: 50%;
